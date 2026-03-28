@@ -34,7 +34,7 @@ Full GC的时候除了收集年轻代，老年代之外，也将Humongous区一�
   -XX:MaxGCPauseMillis 目标暂停时间（默认200ms）
   -XX:G1NewSizePercent 新生代内存初始空间(默认整堆5%)
   -XX:G1MaxNewSizePercent 新生代内存最大空间
-  -XX:TargetSurvivorRatio Survivor区的填充容量（默认50%），Survivor区域里的一批对象（年龄1+年龄2+……+年龄n）综合超过了Survivor区域的50%，此时就会把年龄>=n的对象放入老年代
+  -XX:TargetSurvivorRatio to Survivor区的填充容量（默认50%），to Survivor区域里的一批对象（年龄1+年龄2+……+年龄n）综合超过了to Survivor区域的50%，此时就会把年龄>=n的对象放入老年代
   -XX:MaxTenuringThreshold 最大年龄阈值（默认15）
   -XX:InitiatingHeapOccupancyPercent 老年代占用空间达到整堆内存阈值(默认45%)，则执行新生代和老年代的混合收集(MixedGC)
   -XX:G1MixedGCLiveThresholdPercent(默认85%) region中的存活对象低于这个值时才会回收该region，如果超过这个值，存活对象过多，回收的的意义不大
